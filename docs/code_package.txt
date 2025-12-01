@@ -1,0 +1,11 @@
+nuitka \
+  --standalone \
+  --output-dir=build_nuitka \
+  --follow-imports \
+  --enable-plugin=numpy \
+  --enable-plugin=torch \
+  --include-data-dir=configs=configs \
+  --include-data-dir=models=models \
+  --include-data-dir=logo=logo \
+  --static-libpython=no \
+  tools/mainui.py
