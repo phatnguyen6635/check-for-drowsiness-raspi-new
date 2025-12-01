@@ -7,7 +7,7 @@ import time
 import sys
 import os
 import numpy as np
-from typing import Optional, Tuple
+from typing import Optional
 from collections import deque
 from dataclasses import dataclass
 

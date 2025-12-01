@@ -193,25 +193,6 @@ class CameraManager:
             if not self.cam_deque:
                 return None
             return self.cam_deque[-1]
-        
-    def _crop_frame(self, frame: np.ndarray) -> np.ndarray:
-        """
-        Crop the frame to a specific region of interest (ROI).
-        
-        Args:
-            frame: Input frame from camera
-            
-        Returns:
-            Cropped frame
-        """
-        # Get frame dimensions
-        h, w = frame.shape[:2]
-    
-        x_start = 220
-        crop_width = w - x_start*2
-        # Perform cropping using array slicing
-        cropped_frame = frame[:, x_start:x_start+crop_width]
-        return cropped_frame
     
     def get_fps(self) -> float:
         with self._lock:
