@@ -264,7 +264,7 @@ def main() -> None:
         logger.info("=" * 60)
 
         configs = load_config()
-        serial_conn = initialize_serial(logger)
+        serial_conn = initialize_serial(logger=logger)
 
         # Camera
         cam = CameraManager(logger=logger, configs=configs)
